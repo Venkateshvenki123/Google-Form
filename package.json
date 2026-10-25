@@ -1,0 +1,19 @@
+{
+  "name": "google-form-dynamic-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready Google Forms dynamic builder and admin platform",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix server",
+    "start": "npm run start --prefix server",
+    "test": "npm run test --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
